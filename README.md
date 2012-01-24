@@ -4,7 +4,7 @@ Copyright (c) 2012, Jacob Peck, All Rights Reserved.
 
 ## Overview
 
-Many languages have these handy little datatypes called symbolic atoms.  These allow a programmer to create a name that isn't bound to any particular value, but is unique in value such that any two symbols sharing the same name always evaluate as being equal.  Common Lisp has influenced the design of this symbol library, with the addition of association lists and property lists attached to symbols, to allow a bit more flexibility.
+Many languages have these handy little datatypes called symbolic atoms.  These allow a programmer to create a name that isn't bound to any particular value, but is unique in value such that any two symbols sharing the same name always evaluate as being equal.  Common Lisp has influenced the design of this symbol library, with the addition of property lists attached to symbols, to allow a bit more flexibility.
 
 ### Example
 Here's an annotated interactive session using io-symbols.  Example programs will be included in the future.
@@ -59,6 +59,5 @@ The base symbol implementation came from my work on the [jedi programming langua
 
 Here's a short list of what needs to be done:
 
-  * Association lists (Common Lisp style)
   * Property lists (Common Lisp style)
   * Example programs

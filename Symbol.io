@@ -2,7 +2,6 @@
 // Jacob M. Peck
 
 // todo:
-// a-lists
 // p-lists
 // examples
 
