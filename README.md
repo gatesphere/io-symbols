@@ -81,9 +81,3 @@ Here's an annotated interactive session using io-symbols.  Example programs will
 ## License
 
 The base symbol implementation came from my work on the [jedi programming language](https://github.com/gatesphere/jedi), and over there, it's released under a BSD license.  However, this reworked version (with more functionality!) I am releasing into the public domain.  It's yours, bud.
-
-## To do
-
-Here's a short list of what needs to be done:
-
-  * Example programs
