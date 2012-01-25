@@ -4,6 +4,8 @@
 // todo:
 // examples
 
+//doFile("io-symbols-operator.io")
+
 // magic
 Object : := method(
   msg := call argAt(0)
@@ -15,7 +17,7 @@ Object : := method(
 )
 
 // more magic
-OperatorTable addOperator(":", 1) // change priority?  1 seems to work for me...
+//OperatorTable addOperator(":", 1) // change priority?  1 seems to work for me...
 
 // Symbol proto
 Symbol := Object clone do(

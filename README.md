@@ -11,7 +11,7 @@ Here's an annotated interactive session using io-symbols.  Example programs will
 
     $ io
     Io 20110905
-    Io> doFile("Symbol.io") // first, we load the library.  You could also just type Symbol
+    Io> doFile("io-symbols.io") // first, we load the library.
     ==>  SymbolTable_0xc37478:
       clone            = method(...)
       get              = method(name, ...)
