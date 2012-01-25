@@ -1,6 +1,6 @@
 # io-symbols - Symbolic atoms for the Io Programming language
 
-Copyright (c) 2012, Jacob Peck, All Rights Reserved.
+Copyleft (<-) 2012, Jacob Peck, No Rights Reserved.
 
 ## Overview
 
@@ -11,7 +11,7 @@ Here's an annotated interactive session using io-symbols.  Example programs will
 
     $ io
     Io 20110905
-    Io> doFile("Symbol.io") // first, we load the library
+    Io> doFile("Symbol.io") // first, we load the library.  You could also just type Symbol
     ==>  SymbolTable_0xc37478:
       clone            = method(...)
       get              = method(name, ...)
@@ -47,6 +47,33 @@ Here's an annotated interactive session using io-symbols.  Example programs will
     ==> false
     // awesome! it works!
     
+    // use some p-lists, to interesting effect
+    Io> :hello symbol_plist // get the plist of :hello
+    ==> list()
+    Io> :hello set(:printrep, "I'm a symbol called hello.") // set a property
+    ==> :hello
+    Io> :hello set(:age, 4)
+    ==> :hello
+    Io> :hello symbol_plist
+    ==> list(:printrep, I'm a symbol called hello., :age, 4) // they're stored as pairs
+    Io> :hello get(:age) // retrieve a property
+    ==> 4
+    Io> :hello get(:printrep)
+    ==> I'm a symbol called hello.
+    Io> :hello remove(:age) // remove a property
+    ==> :hello
+    Io> :hello get(:age) // invalid properties return nil
+    ==> nil
+    Io> :hello symbol_plist
+    ==> list(:printrep, I'm a symbol called hello.)
+    Io> out := method(symbol, writeln(symbol get(:printrep))) // using a method
+    ==> method(symbol,
+        writeln(symbol get(: printrep))
+    )
+    Io> out(:hello)
+    I'm a symbol called hello.
+    ==> nil
+    
     // now, to end with a bang
     Io> block(x, if(x == :die, System exit)) call(:die)
 
@@ -59,5 +86,4 @@ The base symbol implementation came from my work on the [jedi programming langua
 
 Here's a short list of what needs to be done:
 
-  * Property lists (Common Lisp style)
   * Example programs
